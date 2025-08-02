@@ -11,9 +11,7 @@ export default function App() {
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <BrowserRouter>
         <Routes>
-          <Route path="/auth">
-            <Route path="login" element={<CardDemo />} />
-          </Route>
+            <Route path="/" element={<CardDemo />} />
           <Route path="/dashboard" element={<Dashboard/>} />
         </Routes>
       </BrowserRouter>

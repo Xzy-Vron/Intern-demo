@@ -10,11 +10,17 @@ import {
 } from "./../components/ui/card";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
+import { useNavigate } from "react-router";
+import { use } from "react";
 
 export function CardDemo() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/dashboard");
+  }
   return (
     <>
-      <div className="flex justify-center items-center h-screen">
+      <div className="flex flex-col gap-10 justify-center items-center h-screen">
         <Card className="w-full max-w-sm">
           <CardHeader>
             <CardTitle>Login to your account</CardTitle>
@@ -61,7 +67,12 @@ export function CardDemo() {
             </Button>
           </CardFooter>
         </Card>
+        <div className="flex justify-end items-end w-full pr-20">
+        <Button onClick={handleClick}> Dashboard </Button>
       </div>
+      </div>
+
+      
     </>
   );
 }
