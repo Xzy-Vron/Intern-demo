@@ -9,7 +9,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("https://intern-demo-gamma.vercel.app/", {
+        const res = await fetch(`${process.env.BACKEND_BASE_URL}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

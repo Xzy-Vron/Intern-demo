@@ -3,19 +3,23 @@ import mongoose from "mongoose";
 import cors from "cors";
 import { referalCode, name } from "./data/data.js";
 import { random } from "./data/random.js";
+import dotenv from "dotenv";
 
+
+dotenv.config()
 
 const app = express();
 
 
 app.use(cors({
-  origin: "https://intern-demo-ttah.vercel.app/",
+  origin: `process.env.FRONTEND_BASE`,
   credentials: true
 }));
 app.use(express.urlencoded({
   extended: true
 }));
 app.use(express.json());
+
 
 
 
