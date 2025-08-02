@@ -12,7 +12,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: `process.env.FRONTEND_BASE`,
+  origin: process.env.FRONTEND_BASE,
   credentials: true
 }));
 app.use(express.urlencoded({
